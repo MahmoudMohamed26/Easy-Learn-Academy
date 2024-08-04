@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="src/all.min.css">
+    <link rel="stylesheet" href="src/main.css">
+    <link rel="stylesheet" href="src/login.css">
+    <title>Easy Learn Acedemy</title>
+</head>
+<body>
+    <div class="center-dot"></div>
+    <div class="circle"></div>
+    <div class="fixed-shadow left-[-250px]"></div>
+    <div class="fixed-shadow right-[-250px]"></div>
+    <a href="#" class="opacity-0 duration-300 pageup invisible">
+        <div class="z-30 p-4 rounded-full bottom-[100px] right-[50px] bg-[#5F2DED] fixed">
+            <img src="imgs/pageup.png" class="animate-bounce" width="20px" alt="pageup">
+        </div>
+    </a>
+    <header class="bg-[#191B1E] py-2 sm:block hidden px-4">
+        <div class="container flex justify-between text-white text-sm">
+            <p>Call Us :+2015 5466 8191</p>
+            <div class="flex">
+                <p class="mr-5">Mail Us: mk1644@fayoum.edu.eg</p>
+                <ul class="flex gap-2">
+                    <a target="_blank" href="https://www.facebook.com/EasyLearnAca/"><li><i class="fa-brands fa-facebook-f fa-fw"></i></li></a>
+                    <a target="_blank" href="https://linkedin.com/company/easylearn-academy/mycompany/
+                    "><li><i class="fa-brands fa-linkedin-in fa-fw"></i></li></a>
+                    <a target="_blank" href="https://www.instagram.com/easylearn000aca"><li><i class="fa-brands fa-instagram fa-fw"></i></li></a>
+                    <a target="_blank" href="https://www.youtube.com/@easylearnacademy"><li><i class="fa-brands fa-youtube fa-fw"></i></li></a>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="absolute left-[50%] top-[50%] z-40 loader">
+        <svg aria-hidden="true" class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+            <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+        </svg>
+        <span class="sr-only">Loading...</span>
+    </div>
+
+    <div class="container mt-[100px] relative z-10 m-auto p-5 content" style="display: none;">
+        <h1 class="text-center font-bold mb-10 text-4xl">Add Course</h1>
+        <form>
+            <div class="mt-3">
+                <input type="text" class="bg-[#F0F1F3] placeholder:text-[#9CA3AF] py-2 px-5 rounded-sm outline-none border-0 w-full" placeholder="Title" name="title">
+            </div>
+            <div class="mt-3 flex flex-col sm:flex-row justify-between w-full gap-3">
+                <input type="text" class="bg-[#F0F1F3] placeholder:text-[#9CA3AF] py-2 px-5 rounded-sm outline-none border-0 flex-1" placeholder="Description" name="desc">
+            </div>
+            <div class="mt-3">
+                <input type="text" class="bg-[#F0F1F3] placeholder:text-[#9CA3AF] py-2 px-5 rounded-sm outline-none border-0 w-full" placeholder="Image URL" name="image">
+            </div>
+            <div class="mt-3 flex flex-col sm:flex-row justify-between w-full gap-3">
+                <input type="number" class="bg-[#F0F1F3] placeholder:text-[#9CA3AF] py-2 px-5 rounded-sm outline-none border-0 flex-1" placeholder="Hours" name="hours">
+            </div>
+            <div class="mt-3 flex flex-col sm:flex-row justify-between w-full gap-3">
+                <input type="number" class="bg-[#F0F1F3] placeholder:text-[#9CA3AF] py-2 px-5 rounded-sm outline-none border-0 flex-1" placeholder="Lessons" name="lessons">
+            </div>
+            <button type="submit" class="w-full mt-3 py-2 px-5 bg-[#5F2DED] rounded-md text-white font-bold text-center border border-[#5F2DED] duration-300 hover:bg-transparent hover:text-[#5F2DED]">Add Course</button>
+            <p class="error text-sm text-red-700 mt-3"></p>
+        </form>
+    
+
+        <div class="pt-[100px] container px-4 relative z-10">
+            <h1 class="text-center font-bold text-4xl">Courses</h1>
+            <div class="shadow-lg mt-10">
+                <table class="w-full table-fixed">
+                    <thead class="bg-[#5F2DED]">
+                        <tr>
+                            <th class="text-center font-bold text-2xl py-[12px] text-white border">Name</th>
+                            <th class="text-center font-bold text-2xl py-[12px] text-white border">Added By</th>
+                            <th class="text-center font-bold text-2xl py-[12px] text-white border">Hours</th>
+                            <th class="text-center font-bold text-2xl py-[12px] text-white border">Lessons</th>
+                            <th class="text-center font-bold text-2xl py-[12px] text-white border">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="showCourses">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="pt-[100px] container px-4 relative z-10">
+            <h1 class="text-center font-bold text-4xl">Users (Admins)</h1>
+            <div class="mt-10 shadow-lg">
+                <table class="w-full table-fixed">
+                    <thead class="bg-[#5F2DED]">
+                        <tr>
+                            <th class="text-center font-bold text-2xl py-[12px] text-white border">Name</th>
+                            <th class="text-center font-bold text-2xl py-[12px] text-white border">Email</th>
+                            <th class="text-center font-bold text-2xl py-[12px] text-white border">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="showAdmins">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="pt-[100px] mb-[100px] container px-4 relative z-10">
+            <div class="md:flex items-center justify-between mb-10">
+                <h1 class="md:text-center font-bold text-4xl">Users (Members)</h1>
+                <input class="md:mt-0 mt-10 bg-transparent searchMembers py-2 outline-none w-[400px] px-5 border border-[#5F2DED] rounded-md" type="text" placeholder="Search by username">
+            </div>
+            <div class="shadow-lg">
+                <table class="w-full table-fixed">
+                    <thead class="bg-[#5F2DED]">
+                        <tr>
+                            <th class="text-center font-bold text-2xl py-[12px] text-white border">Name</th>
+                            <th class="text-center font-bold text-2xl py-[12px] text-white border">Email</th>
+                            <th class="text-center font-bold text-2xl py-[12px] text-white border">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="showMembers">
+                        <tr>
+                            <td data-label="Name" class="p-[14px] text-center text-xl">Member Name</td>
+                            <td data-label="Email" class="p-[14px] text-center text-xl">Member email</td>
+                            <td data-label="Action" class="p-[14px] text-center text-xl"><button class="addAdmin py-2 px-5 rounded-md bg-green-600 text-white duration-300 hover:bg-green-700">Add Admin</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="cursor.js"></script>
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js';
+        import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js';
+        import { getFirestore, doc, getDoc , collection , addDoc } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js';
+    
+        // Your Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDqUFKGExkj9JGEI5a5omi-VJaAM7uxYn4",
+            authDomain: "easy-learn-academy.firebaseapp.com",
+            projectId: "easy-learn-academy",
+            storageBucket: "easy-learn-academy.appspot.com",
+            messagingSenderId: "897526968186",
+            appId: "1:897526968186:web:52853e73e1510a9f6870c3",
+            measurementId: "G-78MVMBQLD5"
+        };
+    
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+        const loader = document.querySelector(".loader");
+        const content = document.querySelector(".content");
+
+        document.addEventListener('DOMContentLoaded', () => {
+        const form = document.querySelector('form');
+        const errorElement = document.querySelector('.error');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const title = form.title.value;
+            const description = form.desc.value;
+            const image = form.image.value;
+            const hours = form.hours.value;
+            const lessons = form.lessons.value;
+
+            const user = auth.currentUser;
+
+            // Reset error message
+            errorElement.textContent = '';
+
+            try {
+
+                const userDoc = await getDoc(doc(db, "users", user.uid));
+                const username = userDoc.data().username;
+                const docRef = await addDoc(collection(db, 'courses'), {
+                    title: title,
+                    description: description,
+                    image: image,
+                    hours: hours,
+                    lessons: lessons,
+                    addedBy: username
+                });
+                errorElement.style.color = "green"
+                errorElement.textContent = 'Added Successfully';
+                form.reset();
+            } catch (error) {
+                console.error('Error adding document: ', error);
+                errorElement.textContent = 'Something went wrong';
+            }
+        });
+    });
+    
+        document.addEventListener('DOMContentLoaded', () => {
+            onAuthStateChanged(auth, async (user) => {
+                if (user) {
+                    try {
+                        // Construct the document reference
+                        const userDocRef = doc(db, 'users', user.uid);
+    
+                        // Fetch the document
+                        const userDoc = await getDoc(userDocRef);
+    
+                        if (userDoc.exists()) {
+                            const userData = userDoc.data();
+    
+                            if (userData.role !== 'admin') {
+                                window.location.href = 'index.html';
+                            }
+                        } else {
+                            window.location.href = 'index.html';
+                        }
+                    } catch (error) {
+                        console.error("Error fetching user data:", error);
+                        window.location.href = 'index.html'; // Optional fallback in case of error
+                    }
+                } else {
+                    console.log("User not logged in, redirecting...");
+                    window.location.href = 'index.html';
+                }
+                
+                setTimeout(() => {
+                    loader.style.display = "none";
+                    content.style.display = "block";
+                }, 1000);
+            });
+        });
+    </script>
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js';
+        import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js';
+        import { getFirestore, collection, getDocs, doc, deleteDoc } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js';
+    
+        // Your Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDqUFKGExkj9JGEI5a5omi-VJaAM7uxYn4",
+            authDomain: "easy-learn-academy.firebaseapp.com",
+            projectId: "easy-learn-academy",
+            storageBucket: "easy-learn-academy.appspot.com",
+            messagingSenderId: "897526968186",
+            appId: "1:897526968186:web:52853e73e1510a9f6870c3",
+            measurementId: "G-78MVMBQLD5"
+        };
+    
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+    
+        // Function to display a course in the table
+        function displayCourse(courseId, courseData) {
+            const courseRow = document.createElement('tr');
+            courseRow.innerHTML = `
+                <td data-label="Name" class="p-[14px] text-center text-xl">${courseData.title}</td>
+                <td data-label="Added By" class="p-[14px] text-center text-xl">${courseData.addedBy}</td>
+                <td data-label="Hours" class="p-[14px] text-center text-xl">${courseData.hours}</td>
+                <td data-label="Lessons" class="p-[14px] text-center text-xl">${courseData.lessons}</td>
+                <td data-label="Action" class="p-[14px] text-center text-xl">
+                    <button class="removeCourse py-2 px-5 rounded-md bg-red-600 text-white duration-300 hover:bg-red-700" data-id="${courseId}">Remove</button>
+                </td>
+            `;
+            document.querySelector('.showCourses').appendChild(courseRow);
+        }
+    
+        // Function to fetch all courses from Firestore and display them
+        async function fetchAndDisplayCourses() {
+            try {
+                const querySnapshot = await getDocs(collection(db, 'courses'));
+                querySnapshot.forEach((doc) => {
+                    displayCourse(doc.id, doc.data());
+                });
+            } catch (error) {
+                console.error('Error fetching courses:', error);
+            }
+        }
+
+        fetchAndDisplayCourses()
+    
+        // Function to remove a course from Firestore
+        async function removeCourse(courseId) {
+            try {
+                await deleteDoc(doc(db, 'courses', courseId));
+                document.querySelector(`button[data-id="${courseId}"]`).closest('tr').remove();
+                console.log('Course removed:', courseId);
+            } catch (error) {
+                console.error('Error removing course:', error);
+            }
+        }
+    
+        // Event delegation to handle remove button clicks
+        document.querySelector('.showCourses').addEventListener('click', function(event) {
+            if (event.target.classList.contains('removeCourse')) {
+                const courseId = event.target.getAttribute('data-id');
+                removeCourse(courseId);
+            }
+        });
+    </script>
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js';
+        import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js';
+        import { getFirestore, collection, query, where, getDocs, doc, updateDoc } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js';
+    
+        // Your Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDqUFKGExkj9JGEI5a5omi-VJaAM7uxYn4",
+            authDomain: "easy-learn-academy.firebaseapp.com",
+            projectId: "easy-learn-academy",
+            storageBucket: "easy-learn-academy.appspot.com",
+            messagingSenderId: "897526968186",
+            appId: "1:897526968186:web:52853e73e1510a9f6870c3",
+            measurementId: "G-78MVMBQLD5"
+        };
+    
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+    
+        // Function to display an admin in the table
+        function displayAdmin(adminId, adminData) {
+            const adminRow = document.createElement('tr');
+            adminRow.innerHTML = `
+                <td data-label="Name" class="p-[14px] text-center text-xl">${adminData.username}</td>
+                <td data-label="Email" class="p-[14px] text-center text-xl">${adminData.email}</td>
+                <td data-label="Action" class="p-[14px] text-center text-xl">
+                    <button class="removeAdmin py-2 px-5 rounded-md bg-red-600 text-white duration-300 hover:bg-red-700" data-id="${adminId}">Remove Admin</button>
+                </td>
+            `;
+            document.querySelector('.showAdmins').appendChild(adminRow);
+        }
+    
+        // Function to fetch all admins from Firestore
+        async function fetchAndDisplayAdmins() {
+            try {
+                const q = query(collection(db, 'users'), where('role', '==', 'admin'));
+                const querySnapshot = await getDocs(q);
+                querySnapshot.forEach((doc) => {
+                    displayAdmin(doc.id, doc.data());
+                });
+            } catch (error) {
+                console.error('Error fetching admins:', error);
+            }
+        }
+    
+        // Function to change admin role to member
+        async function changeAdminRoleToMember(adminId) {
+            try {
+                await updateDoc(doc(db, 'users', adminId), {
+                    role: 'member'
+                });
+                document.querySelector(`button[data-id="${adminId}"]`).closest('tr').remove();
+                console.log('Admin role changed to member:', adminId);
+            } catch (error) {
+                console.error("something went wrong");
+            }
+        }
+    
+        // Listen for auth state changes
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                fetchAndDisplayAdmins();
+            } else {
+                console.log('No user is signed in');
+            }
+        });
+    
+        // Event delegation to handle remove button clicks
+        document.querySelector('.showAdmins').addEventListener('click', function(event) {
+            if (event.target.classList.contains('removeAdmin')) {
+                const adminId = event.target.getAttribute('data-id');
+                changeAdminRoleToMember(adminId);
+            }
+        });
+    </script>
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js';
+        import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js';
+        import { getFirestore, collection, query, where, getDocs, doc, updateDoc } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js';
+    
+        // Your Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDqUFKGExkj9JGEI5a5omi-VJaAM7uxYn4",
+            authDomain: "easy-learn-academy.firebaseapp.com",
+            projectId: "easy-learn-academy",
+            storageBucket: "easy-learn-academy.appspot.com",
+            messagingSenderId: "897526968186",
+            appId: "1:897526968186:web:52853e73e1510a9f6870c3",
+            measurementId: "G-78MVMBQLD5"
+        };
+    
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+    
+        // Function to display a member in the table
+        function displayMember(memberId, memberData) {
+            const memberRow = document.createElement('tr');
+            memberRow.innerHTML = `
+                <td data-label="Name" class="p-[14px] text-center text-xl">${memberData.username}</td>
+                <td data-label="Email" class="p-[14px] text-center text-xl">${memberData.email}</td>
+                <td data-label="Action" class="p-[14px] text-center text-xl">
+                    <button class="addAdmin py-2 px-5 rounded-md bg-green-600 text-white duration-300 hover:bg-green-700" data-id="${memberId}">Add Admin</button>
+                </td>
+            `;
+            document.querySelector('.showMembers').appendChild(memberRow);
+        }
+    
+        // Function to fetch all members from Firestore
+        async function fetchAndDisplayMembers(searchQuery = '') {
+            try {
+                const membersContainer = document.querySelector('.showMembers');
+                membersContainer.innerHTML = ''; // Clear the container before adding new results
+    
+                let q = query(collection(db, 'users'), where('role', '==', 'member'));
+                if (searchQuery) {
+                    q = query(collection(db, 'users'), where('role', '==', 'member'), where('username', '>=', searchQuery), where('username', '<=', searchQuery + '\uf8ff'));
+                }
+                const querySnapshot = await getDocs(q);
+                querySnapshot.forEach((doc) => {
+                    displayMember(doc.id, doc.data());
+                });
+            } catch (error) {
+                console.error('Error fetching members:', error);
+            }
+        }
+    
+        // Function to change member role to admin
+        async function changeMemberRoleToAdmin(memberId) {
+            try {
+                await updateDoc(doc(db, 'users', memberId), {
+                    role: 'admin'
+                });
+                document.querySelector(`button[data-id="${memberId}"]`).closest('tr').remove();
+                console.log('Member role changed to admin:', memberId);
+            } catch (error) {
+                console.error('Error changing member role:', error);
+            }
+        }
+    
+        // Listen for auth state changes
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                fetchAndDisplayMembers();
+            } else {
+                console.log('No user is signed in');
+            }
+        });
+    
+        // Event delegation to handle add admin button clicks
+        document.querySelector('.showMembers').addEventListener('click', function(event) {
+            if (event.target.classList.contains('addAdmin')) {
+                const memberId = event.target.getAttribute('data-id');
+                changeMemberRoleToAdmin(memberId);
+            }
+        });
+    
+        // Search functionality
+        document.querySelector('.searchMembers').addEventListener('input', function(event) {
+        const searchQuery = event.target.value.trim().toLowerCase();
+        const allMembers = document.querySelectorAll('.showMembers tr');
+        allMembers.forEach(memberRow => {
+            const memberName = memberRow.querySelector('td[data-label="Name"]').textContent.toLowerCase();
+            if (memberName.includes(searchQuery)) {
+                memberRow.style.display = '';
+            } else {
+                memberRow.style.display = 'none';
+            }
+        });
+    });
+    </script>
+</body>
+</html>

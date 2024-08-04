@@ -1,0 +1,201 @@
+:root {
+    --tw-shadow: 0 0 20px 10px rgba(95, 45, 237, .05);
+    --tw-shadow-colored: 0 0 20px 10px var(--tw-shadow-color);
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+a {
+    cursor: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+.loader {
+    transform: translate(-50% , -50%);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #170F2F;
+    border-radius: 2em;
+}
+
+body {
+    cursor: none;
+    user-select: none;
+}
+
+@media (max-width: 1200px) {
+    body {
+        cursor: default;
+    }
+    .center-dot {
+        display: none;
+    }
+    .circle {
+        display: none;
+    }
+    a {
+        cursor: pointer;
+    }
+}
+
+.web {
+    background-image: url(https://media.licdn.com/dms/image/D5612AQGtVpmMvXQexQ/article-cover_image-shrink_720_1280/0/1704904391393?e=2147483647&v=beta&t=iUbEqyD1tGSDRZscxMJQ83bAlIDS6IQB128xjTrj9PQ);
+}
+
+.flutter {
+    background-image: url(https://www.solutelabs.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F0mnqm898%2Fproduction%2F08e7936ad914738c0f51664eef1497f661c46afb-2240x1260.png&w=3840&q=75);
+}
+
+.data-science {
+    background-image: url(https://imageio.forbes.com/specials-images/imageserve/615a844b0e678d9d11c5fc26/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds);
+}
+
+.basic {
+    background-image: url(https://img.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.jpg);
+}
+
+.embedded {
+    background-image: url(https://externlabs.com/blogs/wp-content/uploads/2021/10/iot-embedded-system-prev.webp);
+}
+
+.notshow1 {
+    opacity: 0;
+    transform: translateX(-200px);
+}
+
+.show1 {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.notshow2 {
+    opacity: 0;
+    transform: translateY(200px);
+}
+
+.show2 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animation1 {
+    animation: rotation infinite 2s;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.animation2 {
+    animation: movingx infinite 5s;
+}
+
+@keyframes movingx {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(60px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.animation3 {
+    animation: movingy infinite 5s;
+}
+
+@keyframes movingy {
+    0% {
+        transform: translatey(0);
+    }
+    50% {
+        transform: translatey(-60px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+.specialshadow2 {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.theGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(350px , 1fr));
+    gap: 60px;
+}
+
+.fixed-shadow{
+    background-image: linear-gradient(45deg, #f2277e, #5f2ded);
+    position: fixed;
+    top: 200px;
+    bottom: auto;
+    z-index: -1;
+    width: 500px;
+    height: 500px;
+    border-radius: 1000px;
+    opacity: .1;
+    filter: blur(100px);
+    z-index: 3;
+}
+
+.center-dot {
+    width: 5px;
+    height: 5px;
+    background-color: #FA3F76;
+}
+.circle {
+    width: 35px;
+    height: 35px;
+    border: 2px solid black;
+}
+
+.center-dot,
+.circle {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    border-radius: 50%;
+    z-index: 100;
+    pointer-events: none;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #EEE;
+}
+
+tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+@media(max-width: 1024px){
+    table thead {
+        display: none;
+    }
+    table tr td{
+        display: block;
+        text-align: right !important;
+        position: relative;
+    }
+    table tr td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 12px;
+        font-weight: bolder;
+    }
+}
